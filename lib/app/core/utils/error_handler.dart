@@ -104,11 +104,11 @@ class Error {
           Map? bot = c?['bot'];
 
           bool active = bot?['active'] ?? AppConfig.bot;
-          String token = bot?['token'] ?? AppConfig.botToken;
-          String chatId = bot?['chat_id'] ?? AppConfig.chatId;
+          // String token = bot?['token'] ?? AppConfig.botToken;
+          // String chatId = bot?['chat_id'] ?? AppConfig.chatId;
 
           if (active) {
-            await Telebot.sendMessage(message, token, chatId);
+            await Telebot.sendMessage(message);
           }
         }
       }

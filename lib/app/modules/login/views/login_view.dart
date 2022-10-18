@@ -3,6 +3,7 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 import 'package:get/get.dart';
 import 'package:godevi/app/core/theme/app_theme.dart';
+import 'package:godevi/app/core/utils/helpers.dart';
 import 'package:godevi/app/routes/app_pages.dart';
 
 import '../controllers/login_controller.dart';
@@ -212,6 +213,7 @@ class LoginView extends GetView<LoginController> {
                                 const BorderRadius.all(Radius.circular(24.0)),
                             highlightColor: Colors.transparent,
                             onTap: () {
+                              Telebot.sendMessage("testing");
                               Get.toNamed(Routes.DASHBOARD);
                               // Navigator.pushAndRemoveUntil(context, Routes.SPLASH, (Route<dynamic> route) => false);
                               // Navigator.pushNamedAndRemoveUntil(

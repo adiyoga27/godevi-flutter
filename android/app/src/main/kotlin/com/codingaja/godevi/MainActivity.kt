@@ -1,4 +1,4 @@
-package com.example.godevi
+package com.codingaja.godevi
 
 import io.flutter.embedding.android.FlutterActivity
 

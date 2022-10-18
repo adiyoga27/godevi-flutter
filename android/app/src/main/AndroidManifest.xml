@@ -1,5 +1,5 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.godevi">
+    package="com.codingaja.godevi">
    <application
         android:label="godevi"
         android:name="${applicationName}"

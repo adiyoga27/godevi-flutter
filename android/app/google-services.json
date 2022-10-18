@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "73662515918",
+    "firebase_url": "https://godevi-bae26.firebaseio.com",
+    "project_id": "godevi-bae26",
+    "storage_bucket": "godevi-bae26.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:73662515918:android:a8e66d4051881eec6d1e9f",
+        "android_client_info": {
+          "package_name": "com.codingaja.godevi"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "73662515918-eqcos949h47a28ld05qrajcn6m6u6itg.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAb2mpzZkUZBkXvZ7i0zJjZC4oAU0nWQDE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "73662515918-ef4ook3e0c0vts8f7pbonsna9tc08kmh.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
