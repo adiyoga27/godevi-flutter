@@ -7,6 +7,8 @@ environment:
 
 dependencies: 
   cupertino_icons: ^1.0.2
+  device_info_plus: ^3.2.3
+
   get_cli: ^1.8.1
   get: 4.6.5
   font_awesome_flutter: ^10.2.1
@@ -15,6 +17,12 @@ dependencies:
   intl: ^0.17.0
   flutter: 
     sdk: flutter
+  google_fonts: ^3.0.1
+  get_storage: ^2.0.3
+  mixins: ^0.0.7
+  flutter_easyloading: ^3.0.3
+  teledart: ^0.3.4
+
 
 dev_dependencies: 
   flutter_lints: ^2.0.0

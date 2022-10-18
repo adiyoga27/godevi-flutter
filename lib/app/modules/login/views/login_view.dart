@@ -212,7 +212,7 @@ class LoginView extends GetView<LoginController> {
                                 const BorderRadius.all(Radius.circular(24.0)),
                             highlightColor: Colors.transparent,
                             onTap: () {
-                              // Get.toNamed(Routes.HOME);
+                              Get.toNamed(Routes.DASHBOARD);
                               // Navigator.pushAndRemoveUntil(context, Routes.SPLASH, (Route<dynamic> route) => false);
                               // Navigator.pushNamedAndRemoveUntil(
                               //     context,
