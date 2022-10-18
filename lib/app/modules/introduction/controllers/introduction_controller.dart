@@ -5,6 +5,7 @@ import 'package:get/get.dart';
 import 'package:godevi/app/modules/introduction/views/introduction_view.dart';
 
 class IntroductionController extends GetxController {
+  // ignore: todo
   //TODO: Implement IntroductionController
 
   var pageController = PageController(initialPage: 0);

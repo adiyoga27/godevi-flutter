@@ -32,28 +32,26 @@ class LoginView extends GetView<LoginController> {
               child: SingleChildScrollView(
                 child: Column(
                   children: <Widget>[
-                    Container(
-                      child: Padding(
-                        padding: const EdgeInsets.only(top: 32),
-                        child: Row(
-                          children: <Widget>[
-                            SizedBox(
-                              width: 24,
-                            ),
-                            Expanded(
-                              child: getFTButton(),
-                            ),
-                            SizedBox(
-                              width: 16,
-                            ),
-                            Expanded(
-                              child: getFTButton(isFacebook: false),
-                            ),
-                            SizedBox(
-                              width: 24,
-                            )
-                          ],
-                        ),
+                    Padding(
+                      padding: const EdgeInsets.only(top: 32),
+                      child: Row(
+                        children: <Widget>[
+                          const SizedBox(
+                            width: 24,
+                          ),
+                          Expanded(
+                            child: getFTButton(),
+                          ),
+                          const SizedBox(
+                            width: 16,
+                          ),
+                          Expanded(
+                            child: getFTButton(isFacebook: false),
+                          ),
+                          const SizedBox(
+                            width: 24,
+                          )
+                        ],
                       ),
                     ),
                     Padding(
@@ -73,7 +71,8 @@ class LoginView extends GetView<LoginController> {
                       child: Container(
                         decoration: BoxDecoration(
                           color: AppTheme.getTheme().backgroundColor,
-                          borderRadius: BorderRadius.all(Radius.circular(38)),
+                          borderRadius:
+                              const BorderRadius.all(Radius.circular(38)),
                           // border: Border.all(
                           //   color: HexColor("#757575").withOpacity(0.6),
                           // ),
@@ -81,24 +80,24 @@ class LoginView extends GetView<LoginController> {
                             BoxShadow(
                               color: AppTheme.getTheme().dividerColor,
                               blurRadius: 8,
-                              offset: Offset(4, 4),
+                              offset: const Offset(4, 4),
                             ),
                           ],
                         ),
                         child: Padding(
                           padding: const EdgeInsets.only(left: 16, right: 16),
-                          child: Container(
+                          child: SizedBox(
                             height: 48,
                             child: Center(
                               child: TextField(
                                 maxLines: 1,
                                 onChanged: (String txt) {},
-                                style: TextStyle(
+                                style: const TextStyle(
                                   fontSize: 16,
                                   // color: AppTheme.dark_grey,
                                 ),
                                 cursorColor: AppTheme.getTheme().primaryColor,
-                                decoration: new InputDecoration(
+                                decoration: InputDecoration(
                                   errorText: null,
                                   border: InputBorder.none,
                                   hintText: "Your Email",
@@ -117,7 +116,8 @@ class LoginView extends GetView<LoginController> {
                       child: Container(
                         decoration: BoxDecoration(
                           color: AppTheme.getTheme().backgroundColor,
-                          borderRadius: BorderRadius.all(Radius.circular(38)),
+                          borderRadius:
+                              const BorderRadius.all(Radius.circular(38)),
                           // border: Border.all(
                           //   color: HexColor("#757575").withOpacity(0.6),
                           // ),
@@ -125,24 +125,24 @@ class LoginView extends GetView<LoginController> {
                             BoxShadow(
                               color: AppTheme.getTheme().dividerColor,
                               blurRadius: 8,
-                              offset: Offset(4, 4),
+                              offset: const Offset(4, 4),
                             ),
                           ],
                         ),
                         child: Padding(
                           padding: const EdgeInsets.only(left: 16, right: 16),
-                          child: Container(
+                          child: SizedBox(
                             height: 48,
                             child: Center(
                               child: TextField(
                                 maxLines: 1,
                                 onChanged: (String txt) {},
-                                style: TextStyle(
+                                style: const TextStyle(
                                   fontSize: 16,
                                   // color: AppTheme.dark_grey,
                                 ),
                                 cursorColor: AppTheme.getTheme().primaryColor,
-                                decoration: new InputDecoration(
+                                decoration: InputDecoration(
                                   errorText: null,
                                   border: InputBorder.none,
                                   hintText: "Password",
@@ -163,7 +163,8 @@ class LoginView extends GetView<LoginController> {
                         crossAxisAlignment: CrossAxisAlignment.center,
                         children: <Widget>[
                           InkWell(
-                            borderRadius: BorderRadius.all(Radius.circular(8)),
+                            borderRadius:
+                                const BorderRadius.all(Radius.circular(8)),
                             onTap: () {
                               // Navigator.push(
                               //   context,
@@ -194,12 +195,13 @@ class LoginView extends GetView<LoginController> {
                         height: 48,
                         decoration: BoxDecoration(
                           color: AppTheme.getTheme().primaryColor,
-                          borderRadius: BorderRadius.all(Radius.circular(24.0)),
+                          borderRadius:
+                              const BorderRadius.all(Radius.circular(24.0)),
                           boxShadow: <BoxShadow>[
                             BoxShadow(
                               color: AppTheme.getTheme().dividerColor,
                               blurRadius: 8,
-                              offset: Offset(4, 4),
+                              offset: const Offset(4, 4),
                             ),
                           ],
                         ),
@@ -207,10 +209,10 @@ class LoginView extends GetView<LoginController> {
                           color: Colors.transparent,
                           child: InkWell(
                             borderRadius:
-                                BorderRadius.all(Radius.circular(24.0)),
+                                const BorderRadius.all(Radius.circular(24.0)),
                             highlightColor: Colors.transparent,
                             onTap: () {
-                              Get.toNamed(Routes.HOME);
+                              // Get.toNamed(Routes.HOME);
                               // Navigator.pushAndRemoveUntil(context, Routes.SPLASH, (Route<dynamic> route) => false);
                               // Navigator.pushNamedAndRemoveUntil(
                               //     context,
@@ -218,7 +220,7 @@ class LoginView extends GetView<LoginController> {
                               //     (Route<dynamic> route) => false);
                               // Navigator.pushReplacementNamed(context, Routes.TabScreen);
                             },
-                            child: Center(
+                            child: const Center(
                               child: Text(
                                 "Login",
                                 style: TextStyle(
@@ -241,24 +243,24 @@ class LoginView extends GetView<LoginController> {
     );
   }
 
-  Widget getFTButton({bool isFacebook: true}) {
+  Widget getFTButton({bool isFacebook = true}) {
     return Container(
       height: 48,
       decoration: BoxDecoration(
         color: HexColor(isFacebook ? "#3C5799" : "#dc4a38"),
-        borderRadius: BorderRadius.all(Radius.circular(24.0)),
+        borderRadius: const BorderRadius.all(Radius.circular(24.0)),
         boxShadow: <BoxShadow>[
           BoxShadow(
             color: AppTheme.getTheme().dividerColor,
             blurRadius: 8,
-            offset: Offset(4, 4),
+            offset: const Offset(4, 4),
           ),
         ],
       ),
       child: Material(
         color: Colors.transparent,
         child: InkWell(
-          borderRadius: BorderRadius.all(Radius.circular(24.0)),
+          borderRadius: const BorderRadius.all(Radius.circular(24.0)),
           highlightColor: Colors.transparent,
           onTap: () {},
           child: Center(
@@ -272,12 +274,12 @@ class LoginView extends GetView<LoginController> {
                         : FontAwesomeIcons.google,
                     size: 20,
                     color: Colors.white),
-                SizedBox(
+                const SizedBox(
                   width: 4,
                 ),
                 Text(
                   isFacebook ? "Facebook" : "Twitter",
-                  style: TextStyle(
+                  style: const TextStyle(
                       fontWeight: FontWeight.w500,
                       fontSize: 16,
                       color: Colors.white),
@@ -298,22 +300,22 @@ class LoginView extends GetView<LoginController> {
         SizedBox(
           height: AppBar().preferredSize.height,
           child: Padding(
-            padding: EdgeInsets.only(top: 8, left: 8),
-            child: Container(
+            padding: const EdgeInsets.only(top: 8, left: 8),
+            child: SizedBox(
               width: AppBar().preferredSize.height - 8,
               height: AppBar().preferredSize.height - 8,
               child: Material(
                 color: Colors.transparent,
                 child: InkWell(
-                  borderRadius: BorderRadius.all(
+                  borderRadius: const BorderRadius.all(
                     Radius.circular(32.0),
                   ),
                   onTap: () {
                     Get.back();
                     // Navigator.pop(context);
                   },
-                  child: Padding(
-                    padding: const EdgeInsets.all(8.0),
+                  child: const Padding(
+                    padding: EdgeInsets.all(8.0),
                     child: Icon(Icons.arrow_back),
                   ),
                 ),
@@ -321,11 +323,11 @@ class LoginView extends GetView<LoginController> {
             ),
           ),
         ),
-        Padding(
-          padding: const EdgeInsets.only(top: 4, left: 24),
+        const Padding(
+          padding: EdgeInsets.only(top: 4, left: 24),
           child: Text(
             "Log in",
-            style: new TextStyle(
+            style: TextStyle(
               fontSize: 22,
               fontWeight: FontWeight.w700,
             ),

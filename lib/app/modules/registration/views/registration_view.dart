@@ -1,3 +1,5 @@
+// ignore_for_file: sized_box_for_whitespace
+
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
@@ -171,10 +173,11 @@ class RegistrationView extends GetView<RegistrationController> {
                               child: TextField(
                                 maxLines: 1,
                                 onChanged: (String txt) {},
-                                style: TextStyle(
+                                style: const TextStyle(
                                   fontSize: 16,
                                 ),
                                 cursorColor: AppTheme.getTheme().primaryColor,
+                                // ignore: unnecessary_new
                                 decoration: new InputDecoration(
                                   errorText: null,
                                   border: InputBorder.none,
@@ -194,12 +197,13 @@ class RegistrationView extends GetView<RegistrationController> {
                       child: Container(
                         decoration: BoxDecoration(
                           color: AppTheme.getTheme().backgroundColor,
-                          borderRadius: BorderRadius.all(Radius.circular(38)),
+                          borderRadius:
+                              const BorderRadius.all(Radius.circular(38)),
                           boxShadow: <BoxShadow>[
                             BoxShadow(
                               color: AppTheme.getTheme().dividerColor,
                               blurRadius: 8,
-                              offset: Offset(4, 4),
+                              offset: const Offset(4, 4),
                             ),
                           ],
                         ),
@@ -211,11 +215,11 @@ class RegistrationView extends GetView<RegistrationController> {
                               child: TextField(
                                 maxLines: 1,
                                 onChanged: (String txt) {},
-                                style: TextStyle(
+                                style: const TextStyle(
                                   fontSize: 16,
                                 ),
                                 cursorColor: AppTheme.getTheme().primaryColor,
-                                decoration: new InputDecoration(
+                                decoration: InputDecoration(
                                   errorText: null,
                                   border: InputBorder.none,
                                   hintText: "Repeat Your Password",
@@ -234,12 +238,13 @@ class RegistrationView extends GetView<RegistrationController> {
                       child: Container(
                         decoration: BoxDecoration(
                           color: AppTheme.getTheme().backgroundColor,
-                          borderRadius: BorderRadius.all(Radius.circular(38)),
+                          borderRadius:
+                              const BorderRadius.all(Radius.circular(38)),
                           boxShadow: <BoxShadow>[
                             BoxShadow(
                               color: AppTheme.getTheme().dividerColor,
                               blurRadius: 8,
-                              offset: Offset(4, 4),
+                              offset: const Offset(4, 4),
                             ),
                           ],
                         ),
@@ -251,11 +256,11 @@ class RegistrationView extends GetView<RegistrationController> {
                               child: TextField(
                                 maxLines: 1,
                                 onChanged: (String txt) {},
-                                style: TextStyle(
+                                style: const TextStyle(
                                   fontSize: 16,
                                 ),
                                 cursorColor: AppTheme.getTheme().primaryColor,
-                                decoration: new InputDecoration(
+                                decoration: InputDecoration(
                                   errorText: null,
                                   border: InputBorder.none,
                                   hintText: "Select Country",
@@ -275,12 +280,13 @@ class RegistrationView extends GetView<RegistrationController> {
                         height: 48,
                         decoration: BoxDecoration(
                           color: AppTheme.getTheme().primaryColor,
-                          borderRadius: BorderRadius.all(Radius.circular(24.0)),
+                          borderRadius:
+                              const BorderRadius.all(Radius.circular(24.0)),
                           boxShadow: <BoxShadow>[
                             BoxShadow(
                               color: AppTheme.getTheme().dividerColor,
                               blurRadius: 8,
-                              offset: Offset(4, 4),
+                              offset: const Offset(4, 4),
                             ),
                           ],
                         ),
@@ -288,7 +294,7 @@ class RegistrationView extends GetView<RegistrationController> {
                           color: Colors.transparent,
                           child: InkWell(
                             borderRadius:
-                                BorderRadius.all(Radius.circular(24.0)),
+                                const BorderRadius.all(Radius.circular(24.0)),
                             highlightColor: Colors.transparent,
                             onTap: () {
                               // Navigator.pushNamedAndRemoveUntil(
@@ -296,7 +302,7 @@ class RegistrationView extends GetView<RegistrationController> {
                               //     Routes.TabScreen,
                               //     (Route<dynamic> route) => false);
                             },
-                            child: Center(
+                            child: const Center(
                               child: Text(
                                 "Sign up",
                                 style: TextStyle(
@@ -335,7 +341,8 @@ class RegistrationView extends GetView<RegistrationController> {
                           ),
                         ),
                         InkWell(
-                          borderRadius: BorderRadius.all(Radius.circular(8)),
+                          borderRadius:
+                              const BorderRadius.all(Radius.circular(8)),
                           onTap: () {
                             Get.toNamed(Routes.LOGIN);
                           },
@@ -366,24 +373,24 @@ class RegistrationView extends GetView<RegistrationController> {
     );
   }
 
-  Widget getFTButton({bool isFacebook: true}) {
+  Widget getFTButton({bool isFacebook = true}) {
     return Container(
       height: 48,
       decoration: BoxDecoration(
         color: HexColor(isFacebook ? "#3C5799" : "#dc4a38"),
-        borderRadius: BorderRadius.all(Radius.circular(24.0)),
+        borderRadius: const BorderRadius.all(Radius.circular(24.0)),
         boxShadow: <BoxShadow>[
           BoxShadow(
             color: AppTheme.getTheme().dividerColor,
             blurRadius: 8,
-            offset: Offset(4, 4),
+            offset: const Offset(4, 4),
           ),
         ],
       ),
       child: Material(
         color: Colors.transparent,
         child: InkWell(
-          borderRadius: BorderRadius.all(Radius.circular(24.0)),
+          borderRadius: const BorderRadius.all(Radius.circular(24.0)),
           highlightColor: Colors.transparent,
           onTap: () {},
           child: Center(
@@ -397,12 +404,12 @@ class RegistrationView extends GetView<RegistrationController> {
                         : FontAwesomeIcons.google,
                     size: 20,
                     color: Colors.white),
-                SizedBox(
+                const SizedBox(
                   width: 4,
                 ),
                 Text(
                   isFacebook ? "Facebook" : "Google",
-                  style: TextStyle(
+                  style: const TextStyle(
                       fontWeight: FontWeight.w500,
                       fontSize: 16,
                       color: Colors.white),
@@ -423,22 +430,22 @@ class RegistrationView extends GetView<RegistrationController> {
         SizedBox(
           height: AppBar().preferredSize.height,
           child: Padding(
-            padding: EdgeInsets.only(top: 8, left: 8),
+            padding: const EdgeInsets.only(top: 8, left: 8),
             child: Container(
               width: AppBar().preferredSize.height - 8,
               height: AppBar().preferredSize.height - 8,
               child: Material(
                 color: Colors.transparent,
                 child: InkWell(
-                  borderRadius: BorderRadius.all(
+                  borderRadius: const BorderRadius.all(
                     Radius.circular(32.0),
                   ),
                   onTap: () {
                     Get.back();
                     // Navigator.pop(context);
                   },
-                  child: Padding(
-                    padding: const EdgeInsets.all(8.0),
+                  child: const Padding(
+                    padding: EdgeInsets.all(8.0),
                     child: Icon(Icons.arrow_back),
                   ),
                 ),
@@ -446,11 +453,11 @@ class RegistrationView extends GetView<RegistrationController> {
             ),
           ),
         ),
-        Padding(
-          padding: const EdgeInsets.only(top: 4, left: 24),
+        const Padding(
+          padding: EdgeInsets.only(top: 4, left: 24),
           child: Text(
             "Sign Up",
-            style: new TextStyle(
+            style: TextStyle(
               fontSize: 22,
               fontWeight: FontWeight.w700,
             ),

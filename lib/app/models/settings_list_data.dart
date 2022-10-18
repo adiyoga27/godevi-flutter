@@ -1,5 +1,6 @@
+// ignore_for_file: deprecated_member_use, duplicate_ignore
+
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class SettingsListData {
@@ -37,6 +38,7 @@ class SettingsListData {
     SettingsListData(
       titleTxt: 'Invite Friends',
       isSelected: false,
+      // ignore: deprecated_member_use
       iconData: FontAwesomeIcons.userFriends,
     ),
     SettingsListData(

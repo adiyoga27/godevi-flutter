@@ -1,57 +1,57 @@
-class PopularFilterListData {
+class PopularListData {
   String titleTxt;
   bool isSelected;
 
-  PopularFilterListData({
+  PopularListData({
     this.titleTxt = '',
     this.isSelected = false,
   });
 
-  static List<PopularFilterListData> popularFList = [
-    PopularFilterListData(
+  static List<PopularListData> popularFList = [
+    PopularListData(
       titleTxt: 'Free Breakfast',
       isSelected: false,
     ),
-    PopularFilterListData(
+    PopularListData(
       titleTxt: 'Free Parking',
       isSelected: false,
     ),
-    PopularFilterListData(
+    PopularListData(
       titleTxt: 'Pool',
       isSelected: true,
     ),
-    PopularFilterListData(
+    PopularListData(
       titleTxt: 'Pet Friendly',
       isSelected: false,
     ),
-    PopularFilterListData(
+    PopularListData(
       titleTxt: 'Free wifi',
       isSelected: false,
     ),
   ];
 
-  static List<PopularFilterListData> accomodationList = [
-    PopularFilterListData(
+  static List<PopularListData> accomodationList = [
+    PopularListData(
       titleTxt: 'All',
       isSelected: false,
     ),
-    PopularFilterListData(
+    PopularListData(
       titleTxt: 'Apartment',
       isSelected: false,
     ),
-    PopularFilterListData(
+    PopularListData(
       titleTxt: 'Home',
       isSelected: true,
     ),
-    PopularFilterListData(
+    PopularListData(
       titleTxt: 'Villa',
       isSelected: false,
     ),
-    PopularFilterListData(
+    PopularListData(
       titleTxt: 'Hotel',
       isSelected: false,
     ),
-    PopularFilterListData(
+    PopularListData(
       titleTxt: 'Resort',
       isSelected: false,
     ),
